@@ -1,6 +1,6 @@
 !/bin/sh
 
-tty=`sudo dmesg | grep ttyACM | tail -1 | grep -o ttyACM.`
+tty=$(sudo dmesg | grep ttyACM | tail -1 | grep -o ttyACM.)
 echo "Setting up /dev/${tty}"
 stty -F "/dev/${tty}" 115200 raw -clocal -echo icrnl
 

@@ -9,4 +9,4 @@ logfile="radio_serial_data.txt"
 echo "Logging to: $logfile"
 
 # Use tee to both display in real-time and save to file
-cat "/dev/${tty}" | tee "$logfile"
+cat "/dev/${tty}" | tee "$logfile" | hexdump -C
